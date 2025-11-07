@@ -1,0 +1,13 @@
+{% extends 'landing/base.html' %}
+{% load static%}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+ <div style="text-align: center; margin: 2rem 0;">
+  <img src="{% static 'landing/images/villamagma-logo.png' %}"
+       alt="Imagen principal del juego"
+       style="width: 600px; max-width: 100%; height: auto; border-radius: 16px; border: 5px solid #ffca28; box-shadow: 0 6px 12px rgba(0,0,0,0.3);">
+</div>
+
+  <!-- Aquí va el contenido de la galería, estadísticas, etc. -->
+{% endblock %}

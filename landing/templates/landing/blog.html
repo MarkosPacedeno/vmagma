@@ -1,0 +1,90 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+  <style>
+    .blog-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .blog-card {
+      background-color: #1a1a1a;
+      border: 1px solid #444;
+      border-radius: 12px;
+      width: 300px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: scale(1.03);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 1rem;
+      color: #eee;
+    }
+
+    .blog-content h3 {
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 22px;
+      margin-bottom: 0.5rem;
+      color: #ff4444;
+    }
+
+    .blog-content p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .blog-content a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #f39c12;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .blog-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <h2 class="gothic-text" style="text-align:center; margin-top: 2rem;">Blog</h2>
+
+
+  <h3 class="gothic-text" style="text-align:center;">Comentarios</h3>
+
+<div style="max-width:600px; margin: 0 auto; padding: 1rem;">
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" style="background-color:#f39c12;color:white;padding:10px 20px;border:none;border-radius:8px;">Enviar comentario</button>
+  </form>
+</div>
+
+<div style="max-width:600px; margin: 2rem auto;">
+  {% for comentario in comentarios %}
+    <div style="background-color:#222; padding:1rem; margin-bottom:1rem; border-radius:8px; color:#eee;">
+      <strong>{{ comentario.autor }}</strong> <em style="color:#aaa;">{{ comentario.fecha|date:"d/m/Y H:i" }}</em>
+      <p>{{ comentario.contenido }}</p>
+    </div>
+  {% empty %}
+    <p style="text-align:center; color:#ccc;">Sé el primero en comentar.</p>
+  {% endfor %}
+</div>
+
+{% endblock %}

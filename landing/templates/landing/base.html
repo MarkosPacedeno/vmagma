@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  {% load static %}
+
+  <style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+
+  th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+    background-color: #1a1a1a;
+    color: #eee;
+  }
+
+
+  h2 {
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 2rem;
+    color: #ff4444;
+  }
+
+</style>
+  
+  <table align="center">
+    <tr>
+      <td>
+        <style>
+  .menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  .menu-button {
+    background-color: #f39c12;
+    color: white;
+    padding: 12px 32px;
+    border-radius: 999px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    flex: 1 1 50px; /* mínimo 200px, se expanden si hay espacio */
+    max-width: 100px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+  }
+
+  .menu-button:hover {
+    transform: scale(1.05);
+  }
+</style>
+
+<div class="menu-container">
+  <div class="menu-container">
+  <a href="{% url 'index' %}" class="menu-button">Volver al Inicio</a>
+  <a href="{% url 'galeria' %}" class="menu-button">Ir a la Galería</a>
+  <a href="{% url 'acerca' %}" class="menu-button">Acerca del Juego</a>
+  <a href="{% url 'noticias' %}" class="menu-button">Noticias</a>
+  <a href="{% url 'blog' %}" class="menu-button">Blog</a>
+  <a href="/admin/" class="menu-button">Panel Admin</a>
+</div>
+
+</div>
+      </td>
+    </tr>
+  </table>
+  <meta charset="UTF-8">
+  <title>{% block title %}Promo{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'landing/css/styles.css' %}">
+  <link rel="icon" href="{% static 'landing/images/favicon.ico' %}">
+</head>
+<body>
+
+
+  {% block content %}
+  <!-- Aquí irá el contenido específico de cada página -->
+  {% endblock %}
+
+  <div style="text-align: center; margin: 3rem 0;">
+  <h2>Descarga el juego en tu dispositivo</h2>
+
+  <!-- Botón Play Store -->
+  <a href="https://play.google.com/store/apps/details?id=tu.paquete.juego" target="_blank" style="margin: 2rem; display: inline-block;">
+    <img src="{% static 'landing/icons/play-store5.png' %}" alt="Disponible en Google Play" style="height: 60px;">
+  </a>
+
+  <!-- Botón App Store -->
+  <a href="https://apps.apple.com/app/id1234567890" target="_blank" style="margin: 2rem; display: inline-block;">
+    <img src="{% static 'landing/icons/app-store.png' %}" alt="Disponible en App Store" style="height: 60px;">
+  </a>
+</div>
+<!--Boton de dscarga directa en la pagina-->
+<div style="text-align: center; margin: 3rem 0;">
+  <a href="{% static 'juego/GamePromo.zip' %}" download
+     style="background: linear-gradient(45deg, #e91e63, #ff9800); color: white; padding: 18px 48px; font-size: 20px; font-weight: bold; border-radius: 50px; text-decoration: none; box-shadow: 0 8px 16px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
+     ¡Descargar el Juego Ahora!
+  </a>
+</div>
+
+  <footer class="redes-sociales">
+        
+
+    <h2>Síguenos en redes sociales</h2>
+    <div class="iconos">
+      <a href="https://facebook.com" target="_blank"><img src="{% static 'landing/icons/facebook.svg' %}" alt="Facebook"></a>
+      <a href="https://twitter.com" target="_blank"><img src="{% static 'landing/icons/twitter.svg' %}" alt="Twitter"></a>
+      <a href="https://instagram.com" target="_blank"><img src="{% static 'landing/icons/instagram.svg' %}" alt="Instagram"></a>
+      <a href="https://youtube.com" target="_blank"><img src="{% static 'landing/icons/youtube.svg' %}" alt="YouTube"></a>
+    </div>
+  </footer>
+
+</body>
+</html>
