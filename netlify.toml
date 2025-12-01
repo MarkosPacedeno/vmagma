@@ -1,5 +1,5 @@
 [build]
-  publish = "staticfiles"
+  publish = "public"
   command = ""
 
 [[redirects]]
