@@ -123,6 +123,22 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
+from pathlib import Path
 
+# Ruta base del proyecto
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# URL para servir los archivos estáticos
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'landing/static')]
+
+# Carpeta donde guardas tus archivos estáticos durante desarrollo
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
+# Carpeta final donde collectstatic juntará todos los archivos para producción
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
+# Archivos multimedia (si los usas)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")

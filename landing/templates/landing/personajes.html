@@ -1,0 +1,186 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+<br><br>
+
+<center>
+  <div class="fog-overlay"></div>
+  <div class="hero-content">
+    <h1 class="game-title glitch" data-text="V MAGMA">V MAGMA</h1>
+    <p class="subtitle">INFIERNO URBANO</p>
+    <div class="city-silhouette"></div>
+  </div>
+</center>
+
+<style>
+/* CONTENEDOR DE CARDS */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* CARD BASE */
+.card {
+  background-color: rgba(0,0,0,0.7);
+  border: 2px solid #ff1a1a;
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0 0 20px rgba(255,0,0,0.8);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+.card:hover {
+  transform: scale(1.12);
+  z-index: 10;
+}
+
+/* IMAGEN */
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background-color: #000; /* fondo si hay espacio vacío */
+}
+
+/* CONTENIDO */
+.card-content {
+  padding: 1rem;
+  color: #f0e36f;
+  text-align: center;
+}
+
+.card-content h3 {
+  margin: 0.5rem 0;
+  color: #ff4d4d;
+  text-shadow: 0 0 6px #ff0000;
+}
+
+.card-content p {
+  margin: 0.3rem 0;
+  font-size: 14px;
+}
+
+/* DETALLES OCULTOS */
+.card-details {
+  display: none;
+  margin-top: 1rem;
+  text-align: left;
+  font-size: 13px;
+}
+
+/* MOSTRAR DETALLES EN HOVER */
+.card:hover .card-details {
+  display: block;
+}
+</style>
+
+<center>
+  <div class="fog-overlay"></div>
+  <div class="hero-content">
+    <p class="subtitle">Personajes Principales</p>
+    <div class="city-silhouette"></div>
+  </div>
+</center>
+
+<div class="cards-container">
+
+  <!-- Kenig Galindo -->
+  <div class="card">
+    <img src="{% static 'landing/images/kenig.png' %}" alt="Kenig Galindo">
+    <div class="card-content">
+      <h3>Kenig Galindo</h3>
+      <p><b>Rol:</b> El protagonista</p>
+      <p><b>Motivación:</b> Descubrir qué pasó con su raza</p>
+      <p><b>Estilo:</b> Acción / Investigación</p>
+
+      <div class="card-details">
+        <p><b>Final Bueno:</b> Escapa con su raza</p>
+        <p><b>Final Malo:</b> Se une al experimento</p>
+        <p><b>Final Neutral:</b> Queda atrapado en la ciudad</p>
+        <p><b>Conexiones:</b></p>
+        <ul>
+          <li>Con Mox: si rescata sobrevivientes, Mox puede salvar más</li>
+          <li>Con Juan Cena: si confía, desbloquean finales buenos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Juan Cena -->
+  <div class="card">
+    <img src="{% static 'landing/images/juan.png' %}" alt="Juan Cena">
+    <div class="card-content">
+      <h3>Juan Cena</h3>
+      <p><b>Rol:</b> El luchador</p>
+      <p><b>Motivación:</b> Revelar los secretos de la catástrofe</p>
+      <p><b>Estilo:</b> Fuerza / Decisiones rápidas</p>
+
+      <div class="card-details">
+        <p><b>Final Bueno:</b> Filtra la verdad y se sacrifica</p>
+        <p><b>Final Malo:</b> Vende la info y se convierte en HELL</p>
+        <p><b>Final Neutral:</b> Destruye la info y se salva</p>
+        <p><b>Conexiones:</b></p>
+        <ul>
+          <li>Con Siggy: si lo manipula, Siggy puede traicionarlo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Siggy -->
+  <div class="card">
+    <img src="{% static 'landing/images/siggy.png' %}" alt="Siggy">
+    <div class="card-content">
+      <h3>Siggy</h3>
+      <p><b>Rol:</b> El prisionero fugado</p>
+      <p><b>Motivación:</b> Escapar y redimirse</p>
+      <p><b>Estilo:</b> Supervivencia / Agresividad</p>
+
+      <div class="card-details">
+        <p><b>Final Bueno:</b> Se sacrifica por los demás</p>
+        <p><b>Final Malo:</b> Reina en el caos</p>
+        <p><b>Final Neutral:</b> Escapa solo y atormentado</p>
+        <p><b>Conexiones:</b></p>
+        <ul>
+          <li>Con Mox: si lo ayuda, Mox puede encontrar la cura</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mox -->
+  <div class="card">
+    <img src="{% static 'landing/images/mox.png' %}" alt="Mox">
+    <div class="card-content">
+      <h3>Mox</h3>
+      <p><b>Rol:</b> El simpson</p>
+      <p><b>Motivación:</b> Salvar sobrevivientes, sacrificando su salud mental</p>
+      <p><b>Estilo:</b> Tanque / Sacrificio</p>
+
+      <div class="card-details">
+        <p><b>Final Bueno:</b> Encuentra cura y salva inocentes</p>
+        <p><b>Final Malo:</b> Se transforma por obsesión</p>
+        <p><b>Final Neutral:</b> Sobrevive con Sun, pero pierde la fe</p>
+        <p><b>Conexiones:</b></p>
+        <ul>
+          <li>Con Todos: sus decisiones sobre la cura afectan el destino global</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

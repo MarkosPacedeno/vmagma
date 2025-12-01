@@ -1,154 +1,150 @@
 {% extends 'landing/base.html' %}
 {% load static %}
 
-
 {% block title %}Inicio{% endblock %}
 
 {% block content %}
-  <center>
-    <h2>Conoce más a fondo Villamagma!!!!</h2>
-  </center>
-  
+<br><br>
 
-<h2>V Magma: Infierno Urbano</h2>
+<center>
+  <div class="fog-overlay"></div>
+  <div class="hero-content">
+    <h1 class="game-title glitch" data-text="V MAGMA">V MAGMA</h1>
+    <p class="subtitle">INFIERNO URBANO</p>
+    <div class="city-silhouette"></div>
+  </div>
+</center>
 
-<h3>Personajes Principales</h3>
-<table>
-  <tr>
-    <th>Personaje</th>
-    <th>Rol</th>
-    <th>Motivación</th>
-    <th>Estilo</th>
-  </tr>
-  <tr>
-    <td>Kenig Galindo</td>
-    <td>El protagonista</td>
-    <td>Descubrir qué pasó con su raza</td>
-    <td>Acción / Investigación</td>
-  </tr>
-  <tr>
-    <td>Juan Cena</td>
-    <td>El luchador</td>
-    <td>Revelar los secretos de la catástrofe</td>
-    <td>Fuerza / Decisiones rápidas</td>
-  </tr>
-  <tr>
-    <td>Siggy</td>
-    <td>El prisionero fugado</td>
-    <td>Escapar y redimirse</td>
-    <td>Supervivencia / Agresividad</td>
-  </tr>
-  <tr>
-    <td>Mox</td>
-    <td>El simpson</td>
-    <td>Salvar sobrevivientes, sacrificando su salud mental</td>
-    <td>Tanque / Sacrificio</td>
-  </tr>
-</table>
+<!-- ✅ HISTORIA CINEMÁTICA -->
+<style>
+.story-box {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(0,0,0,0.55);
+  border-left: 4px solid #ff1a1a;
+  border-right: 4px solid #ff1a1a;
+  box-shadow: 0 0 20px rgba(255,0,0,0.4);
+  color: #f0e36f;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 1.5s ease;
+}
 
-<h3>Sistema de Finales</h3>
-<table>
-  <tr>
-    <th>Personaje</th>
-    <th>Final Bueno</th>
-    <th>Final Malo</th>
-    <th>Final Neutral</th>
-  </tr>
-  <tr>
-    <td>Kenig Galindo</td>
-    <td>Escapa con su raza</td>
-    <td>Se une al experimento</td>
-    <td>Queda atrapado en la ciudad</td>
-  </tr>
-  <tr>
-    <td>Juan Cena</td>
-    <td>Filtra la verdad y se sacrifica</td>
-    <td>Vende la info y se convierte en HELL</td>
-    <td>Destruye la info y se salva</td>
-  </tr>
-  <tr>
-    <td>Siggy</td>
-    <td>Se sacrifica por los demás</td>
-    <td>Reina en el caos</td>
-    <td>Escapa solo y atormentado</td>
-  </tr>
-  <tr>
-    <td>Mox</td>
-    <td>Encuentra cura y salva inocentes</td>
-    <td>Se transforma por obsesión</td>
-    <td>Sobrevive con Sun, pero pierde la fe</td>
-  </tr>
-</table>
+.story-title {
+  text-align: center;
+  font-size: 26px;
+  color: #ff4d4d;
+  text-shadow: 0 0 8px #ff0000;
+  margin-bottom: 1rem;
+}
 
-<h3>Conexiones Clave</h3>
-<table>
-  <tr>
-    <th>Origen</th>
-    <th>Destino</th>
-    <th>Impacto</th>
-  </tr>
-  <tr>
-    <td>Kenig Galindo</td>
-    <td>Mox</td>
-    <td>Si rescata sobrevivientes, Mox puede salvar más</td>
-  </tr>
-  <tr>
-    <td>Kenig Galindo</td>
-    <td>Juan Cena</td>
-    <td>Si confía, desbloquean finales buenos</td>
-  </tr>
-  <tr>
-    <td>Juan Cena</td>
-    <td>Siggy</td>
-    <td>Si lo manipula, Siggy puede traicionarlo</td>
-  </tr>
-  <tr>
-    <td>Siggy</td>
-    <td>Mox</td>
-    <td>Si lo ayuda, Mox puede encontrar la cura</td>
-  </tr>
-  <tr>
-    <td>Mox</td>
-    <td>Todos</td>
-    <td>Sus decisiones sobre la cura afectan el destino global</td>
-  </tr>
-</table>
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
 
-<h3>Características Clave del Juego</h3>
-<table>
-  <tr>
-    <th>Categoría</th>
-    <th>Características</th>
-  </tr>
-  <tr>
-    <td>Jugabilidad</td>
-    <td>Mecánicas claras, retos equilibrados, rejugabilidad</td>
-  </tr>
-  <tr>
-    <td>Narrativa</td>
-    <td>Historia envolvente, decisiones con consecuencias</td>
-  </tr>
-  <tr>
-    <td>Ambientación</td>
-    <td>Exploración, escenarios decadentes, secretos</td>
-  </tr>
-  <tr>
-    <td>Audio</td>
-    <td>Música tensa, sonidos ambientales, diálogos emocionales</td>
-  </tr>
-  <tr>
-    <td>Visual</td>
-    <td>Estilo oscuro, retro, con identidad artística propia</td>
-  </tr>
-  <tr>
-    <td>Progreso</td>
-    <td>Mejoras, logros, misiones alternas, lore oculto</td>
-  </tr>
-  <tr>
-    <td>Decisiones</td>
-    <td>Finales múltiples, libertad de exploración</td>
-  </tr>
-</table>
+<div class="story-box">
+  <div class="story-title">Ecos de V Magma</div>
+  <p>
+    V Magma alguna vez fue una ciudad industrial vibrante, pero todo cambió la noche del 
+    <b>Incidente Rojo</b>. Un experimento secreto, diseñado para alterar la mente humana, se salió de control. 
+    La energía liberada se extendió como un pulso vivo, quebrando la cordura de miles de habitantes.
+  </p>
+
+  <p>
+    En medio del caos, <b>cuatro desconocidos</b> despiertan atrapados dentro de los límites sellados de la ciudad. 
+    No saben por qué sobrevivieron al pulso… pero sienten que algo los une.
+  </p>
+
+  <p>
+    <b>Kenig</b> escucha voces desde los túneles.  
+    <b>Juan Cena</b> encuentra archivos que podrían revelar la verdad.  
+    <b>Siggy</b> descubre que las criaturas parecen reconocerlo.  
+    <b>Mox</b> percibe que la ciudad está viva… y enferma.
+  </p>
+
+  <p>
+    Mientras avanzan entre ruinas, humo tóxico y habitantes sin cordura, notan algo inquietante: 
+    <b>sus decisiones alteran la ciudad misma</b>. Calles cambian, sombras se mueven, y voces susurran sus nombres.
+  </p>
+
+  <p>
+    V Magma los observa.  
+    V Magma los necesita.  
+    V Magma decidirá quién escapa… y quién debe quedarse para siempre.
+  </p>
+</div>
+
+<!-- ✅ CARDS DE CARACTERÍSTICAS -->
+<style>
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ✅ 2 cards por fila */
+  gap: 2rem;
+  max-width: 700px; /* ✅ Centrado y ancho perfecto */
+  margin: 2rem auto;
+  justify-items: center; /* ✅ Centra cada card */
+}
+
+.card {
+  background-color: rgba(0,0,0,0.7);
+  border: 2px solid #ff1a1a;
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0 0 20px rgba(255,0,0,0.8);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 1rem;
+  color: #f0e36f;
+  text-align: center;
+}
+
+.card-content h3 {
+  margin: 0.5rem 0;
+  color: #ff4d4d;
+  text-shadow: 0 0 6px #ff0000;
+}
+
+.card-content p {
+  margin: 0.3rem 0;
+  font-size: 14px;
+}
+
+/* ✅ RESPONSIVE: en pantallas pequeñas se vuelven 1 por fila */
+@media (max-width: 600px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<center>
+  <div class="fog-overlay"></div>
+  <div class="hero-content">
+    <p class="subtitle">Características Clave del Juego</p>
+    <div class="city-silhouette"></div>
+  </div>
+</center>
+
+<div class="cards-container">
+  <div class="card"><div class="card-content"><h3>Jugabilidad</h3><p>Mecánicas claras, retos equilibrados, rejugabilidad</p></div></div>
+  <div class="card"><div class="card-content"><h3>Narrativa</h3><p>Historia envolvente, decisiones con consecuencias</p></div></div>
+  <div class="card"><div class="card-content"><h3>Ambientación</h3><p>Exploración, escenarios decadentes, secretos</p></div></div>
+  <div class="card"><div class="card-content"><h3>Audio</h3><p>Música tensa, sonidos ambientales, diálogos emocionales</p></div></div>
+  <div class="card"><div class="card-content"><h3>Visual</h3><p>Estilo oscuro, retro, con identidad artística propia</p></div></div>
+  <div class="card"><div class="card-content"><h3>Progreso</h3><p>Mejoras, logros, misiones alternas, lore oculto</p></div></div>
+  <div class="card"><div class="card-content"><h3>Decisiones</h3><p>Finales múltiples, libertad de exploración</p></div></div>
+</div>
 
 {% endblock %}
-

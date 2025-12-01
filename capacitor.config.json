@@ -1,0 +1,10 @@
+{
+  "appId": "com.marcos.gamepromo",
+  "appName": "gamepromo",
+  "webDir": "staticfiles",
+  "bundledWebRuntime": false,
+  "server": {
+    "url": "http://10.0.2.2:8000", 
+    "cleartext": true
+  }
+}

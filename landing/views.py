@@ -16,6 +16,9 @@ def acerca(request):
 def noticias(request):
     return render(request, 'landing/noticias.html')
 
+def personajes(request):
+    return render(request, 'landing/personajes.html')
+
 def blog(request):
     comentarios = Comentario.objects.order_by('-fecha')
     form = ComentarioForm()
