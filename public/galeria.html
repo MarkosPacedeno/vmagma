@@ -1,0 +1,23 @@
+{% extends 'landing/base.html' %}
+{% load static%}
+
+{% block title %}Galería{% endblock %}
+
+{% block content %}
+<center>
+  <h2 style="color: transparent;"> . </h2>
+</center>
+<center>
+  <div style="text-align: center; margin: 3rem 0;">
+  <div class="fog-overlay"></div>
+    <div class="hero-content">
+      <p class="subtitle">Galeria</p>
+      <div class="city-silhouette"></div>
+</center>
+<div class="imagenes">
+  <img src="{% static 'landing/images/principal.png' %}" alt="Captura del juego" class="bounce">
+  <img src="{% static 'landing/images/principal1.png' %}" alt="Personaje principal" class="bounce">
+  <img src="{% static 'landing/images/principal.png' %}" alt="Nivel educativo" class="bounce">
+</div>
+
+{% endblock %}

@@ -1,0 +1,150 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<br><br>
+
+<center>
+  <div class="fog-overlay"></div>
+  <div class="hero-content">
+    <h1 class="game-title glitch" data-text="V MAGMA">V MAGMA</h1>
+    <p class="subtitle">INFIERNO URBANO</p>
+    <div class="city-silhouette"></div>
+  </div>
+</center>
+
+<!-- ✅ HISTORIA CINEMÁTICA -->
+<style>
+.story-box {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(0,0,0,0.55);
+  border-left: 4px solid #ff1a1a;
+  border-right: 4px solid #ff1a1a;
+  box-shadow: 0 0 20px rgba(255,0,0,0.4);
+  color: #f0e36f;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 1.5s ease;
+}
+
+.story-title {
+  text-align: center;
+  font-size: 26px;
+  color: #ff4d4d;
+  text-shadow: 0 0 8px #ff0000;
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<div class="story-box">
+  <div class="story-title">Ecos de V Magma</div>
+  <p>
+    V Magma alguna vez fue una ciudad industrial vibrante, pero todo cambió la noche del 
+    <b>Incidente Rojo</b>. Un experimento secreto, diseñado para alterar la mente humana, se salió de control. 
+    La energía liberada se extendió como un pulso vivo, quebrando la cordura de miles de habitantes.
+  </p>
+
+  <p>
+    En medio del caos, <b>cuatro desconocidos</b> despiertan atrapados dentro de los límites sellados de la ciudad. 
+    No saben por qué sobrevivieron al pulso… pero sienten que algo los une.
+  </p>
+
+  <p>
+    <b>Kenig</b> escucha voces desde los túneles.  
+    <b>Juan Cena</b> encuentra archivos que podrían revelar la verdad.  
+    <b>Siggy</b> descubre que las criaturas parecen reconocerlo.  
+    <b>Mox</b> percibe que la ciudad está viva… y enferma.
+  </p>
+
+  <p>
+    Mientras avanzan entre ruinas, humo tóxico y habitantes sin cordura, notan algo inquietante: 
+    <b>sus decisiones alteran la ciudad misma</b>. Calles cambian, sombras se mueven, y voces susurran sus nombres.
+  </p>
+
+  <p>
+    V Magma los observa.  
+    V Magma los necesita.  
+    V Magma decidirá quién escapa… y quién debe quedarse para siempre.
+  </p>
+</div>
+
+<!-- ✅ CARDS DE CARACTERÍSTICAS -->
+<style>
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ✅ 2 cards por fila */
+  gap: 2rem;
+  max-width: 700px; /* ✅ Centrado y ancho perfecto */
+  margin: 2rem auto;
+  justify-items: center; /* ✅ Centra cada card */
+}
+
+.card {
+  background-color: rgba(0,0,0,0.7);
+  border: 2px solid #ff1a1a;
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0 0 20px rgba(255,0,0,0.8);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 1rem;
+  color: #f0e36f;
+  text-align: center;
+}
+
+.card-content h3 {
+  margin: 0.5rem 0;
+  color: #ff4d4d;
+  text-shadow: 0 0 6px #ff0000;
+}
+
+.card-content p {
+  margin: 0.3rem 0;
+  font-size: 14px;
+}
+
+/* ✅ RESPONSIVE: en pantallas pequeñas se vuelven 1 por fila */
+@media (max-width: 600px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<center>
+  <div class="fog-overlay"></div>
+  <div class="hero-content">
+    <p class="subtitle">Características Clave del Juego</p>
+    <div class="city-silhouette"></div>
+  </div>
+</center>
+
+<div class="cards-container">
+  <div class="card"><div class="card-content"><h3>Jugabilidad</h3><p>Mecánicas claras, retos equilibrados, rejugabilidad</p></div></div>
+  <div class="card"><div class="card-content"><h3>Narrativa</h3><p>Historia envolvente, decisiones con consecuencias</p></div></div>
+  <div class="card"><div class="card-content"><h3>Ambientación</h3><p>Exploración, escenarios decadentes, secretos</p></div></div>
+  <div class="card"><div class="card-content"><h3>Audio</h3><p>Música tensa, sonidos ambientales, diálogos emocionales</p></div></div>
+  <div class="card"><div class="card-content"><h3>Visual</h3><p>Estilo oscuro, retro, con identidad artística propia</p></div></div>
+  <div class="card"><div class="card-content"><h3>Progreso</h3><p>Mejoras, logros, misiones alternas, lore oculto</p></div></div>
+  <div class="card"><div class="card-content"><h3>Decisiones</h3><p>Finales múltiples, libertad de exploración</p></div></div>
+</div>
+
+{% endblock %}
