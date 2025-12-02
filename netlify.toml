@@ -7,22 +7,4 @@
   to = "/index.html"
   status = 200
 
-  [[redirects]]
-  from = "/galeria"
-  to = "/galeria.html"
-  status = 200
-
-[[redirects]]
-  from = "/acerca"
-  to = "/acerca.html"
-  status = 200
-
-[[redirects]]
-  from = "/personajes"
-  to = "/personajes.html"
-  status = 200
-
-[[redirects]]
-  from = "/noticias"
-  to = "/noticias.html"
-  status = 200
+  
